@@ -32,5 +32,6 @@ def undistort(img_path, balance=1.0, dim2=None, dim3=None):
     cv2.destroyAllWindows()
 if __name__ == '__main__':
     for p in sys.argv[1:]:
-        for i in range(10):
-            undistort(p, balance=i/10)
+        undistort(p, balance=1.0)
+        # for i in range(10):
+        #     undistort(p, balance=i/10)
