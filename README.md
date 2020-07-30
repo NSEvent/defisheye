@@ -25,7 +25,7 @@ To obtain the proper calibration settings for our lens, we must:
 * Print [this checkerboard image](https://github.com/kvntng17/defisheye/blob/master/calibration_pattern.png) on regular sized printer paper.
 * Stick the checkerboard image we just printed onto a *flat* surface. A clipboard, or in my case, a shoebox works fine. The key here is the checkerboard *must be flat.*
 * Capture photos of the printed checkerboard from multiple angles using our fisheye lens. We should take photos from as many angles as possible. 30+ photos from different angles will suffice.
-* ```mkdir photos``` and move the images taken in the previous step into the ```photos``` directory. These should be png or jpg format.
+* Replace the photos in the ```photos``` directory with the photos captured in the previous step. These should be png or jpg format.
 
 Then to obtain our calibration settings (saved to ```calibrate_config.py```):
 ```
