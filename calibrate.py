@@ -49,3 +49,11 @@ print("Found " + str(N_OK) + " valid images for calibration")
 print("DIM=" + str(_img_shape[::-1]))
 print("K=np.array(" + str(K.tolist()) + ")")
 print("D=np.array(" + str(D.tolist()) + ")")
+
+config_file = 'calibrate_config.py'
+with open(config_file, 'w') as f:
+    f.write("DIM=" + str(_img_shape[::-1]) +"\n")
+    f.write("K=np.array(" + str(K.tolist()) + ")\n")
+    f.write("D=np.array(" + str(D.tolist()) + ")\n")
+
+print(f'Calibration settings saved to {config_file}')
