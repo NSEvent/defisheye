@@ -13,7 +13,7 @@ objp[0,:,:2] = np.mgrid[0:CHECKERBOARD[0], 0:CHECKERBOARD[1]].T.reshape(-1, 2)
 _img_shape = None
 objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.
-images = glob.glob('photos/*.png')
+images = glob.glob('photos/*.png') + glob.glob('photos/*.jpg')
 for fname in images:
     img = cv2.imread(fname)
     if _img_shape == None:
@@ -52,6 +52,7 @@ print("D=np.array(" + str(D.tolist()) + ")")
 
 config_file = 'calibrate_config.py'
 with open(config_file, 'w') as f:
+    f.write("import numpy as np\n")
     f.write("DIM=" + str(_img_shape[::-1]) +"\n")
     f.write("K=np.array(" + str(K.tolist()) + ")\n")
     f.write("D=np.array(" + str(D.tolist()) + ")\n")
