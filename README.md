@@ -43,3 +43,7 @@ python defisheye_retain_all.py input.jpg
 The ```balance``` value [0, 1.0] used in ```defisheye_retain_all.py``` can be modified to crop more or less of the black around the edge of the undistorted image. 
 For example ```balance=0.0``` will produce cropped output with no black edges while ```balance=1.0``` will produce uncropped output.
 By default, ```balance``` is set to 1.0.
+
+---
+
+*Built by **Kevin Tang** — indie iOS/macOS developer. I ship small, focused apps at [kevintang.xyz](https://kevintang.xyz) and write about building at [kevin.md](https://kevin.md).*
